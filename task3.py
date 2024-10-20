@@ -6,15 +6,14 @@
 # 2013
 # MMXIII
 
+def roman(n):
+    A = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
+    rim = ''
+    while n > 0:
+        for i, r in A:
+            while n >= i:
+                rim += r
+                n -= i
+    return rim
 n = int(input())
-a = n//1000
-b = (n//500)%2
-c = (n//100)%10 - 5*b
-d = (n//50)%2
-e = (n%100)//10 - 5*d
-f = (n//5)%2
-g = n%10 - 5*f
-if g + 1 % 5:
-    g = 0
-    f += 1
-print('M'*a, 'D'* b, 'C'*c, 'L'*d, 'X'*e, 'V'*f, 'I'*g, sep='')
+print(roman(n))

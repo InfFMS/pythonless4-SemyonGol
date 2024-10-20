@@ -11,4 +11,4 @@ def inv(a):
         return a
     print(a%10, end='')
     return inv(a//10)
-print('Reverse number:', inv(a))
+print(inv(a))
