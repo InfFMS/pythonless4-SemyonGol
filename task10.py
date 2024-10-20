@@ -10,5 +10,12 @@
 # перевод из десятичной системы счисления в любую
 # перевод из любой системы счисления в десятичную
 # Объедините эти две подзадачи, получите ответ.
-
-
+#77. 8. 10
+n = input()
+from_base = int(input())
+to_base = int(input())
+def convert_base(n, from_base, to_base):
+    A = list(int(n[-i]) for i in range(1, len(n) + 1))
+    a = 0
+    for i in range(0, len(n)):
+        a += (A[i]) * from_base ** i

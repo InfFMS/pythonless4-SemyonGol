@@ -10,3 +10,11 @@
 # ********
 # *********
 # **********
+n = int(input())
+def star(n):
+    if n < 0:
+        print('Error, n > 0')
+    for i in range(1,n+1):
+        print('*'*i)
+    return ''
+print(star(n))

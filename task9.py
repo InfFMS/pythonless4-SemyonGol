@@ -4,3 +4,13 @@
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
 
+a = int(input())
+def deg2(a):
+    while a >= 1:
+        if a % 2 == 0:
+            return deg2(a//2)
+        elif a == 1:
+            return 'YES'
+        else:
+            return 'NO'
+print(deg2(a))
